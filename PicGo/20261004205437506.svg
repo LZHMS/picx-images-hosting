@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="600" viewBox="0 0 1460 600" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="1460" height="600" fill="#fafafa"/>
+
+  <!-- arrowhead marker for the context -> Jun 12 connectors -->
+  <defs>
+    <marker id="ctxArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#818cf8"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="40" y="42" font-size="28" font-weight="700" fill="#1e1b4b">How the Claude Fable shutdown unfolded</text>
+  <text x="40" y="70" font-size="18" fill="#1f2937">The export order landed three days after launch, into a fight that began in February.</text>
+
+  <!-- ============ Context boxes (background, feeding into Jun 12) ============ -->
+  <!-- Muted indigo so they read as background. Thin #818cf8 arrows drop to the red Jun 12 dot at (415, 290). -->
+
+  <!-- Context box 1 (left) -->
+  <rect x="40" y="98" width="560" height="74" rx="12" fill="#e0e7ff"/>
+  <text x="60" y="129" font-size="18" fill="#1f2937">February 2026: Anthropic named a supply-chain risk;</text>
+  <text x="60" y="153" font-size="18" fill="#1f2937">it sues and wins an injunction</text>
+
+  <!-- Context box 2 (right) -->
+  <rect x="636" y="98" width="424" height="74" rx="12" fill="#e0e7ff"/>
+  <text x="656" y="129" font-size="18" fill="#1f2937">Anthropic files confidentially</text>
+  <text x="656" y="153" font-size="18" fill="#1f2937">for a ~$965B IPO</text>
+
+  <!-- thin arrows from each context box down to the red Jun 12 dot -->
+  <line x1="330" y1="172" x2="412" y2="277" stroke="#818cf8" stroke-width="1.5" marker-end="url(#ctxArrow)"/>
+  <line x1="820" y1="172" x2="420" y2="277" stroke="#818cf8" stroke-width="1.5" marker-end="url(#ctxArrow)"/>
+
+  <!-- ============ Timeline rail ============ -->
+  <!-- Jun 9 -> x=160, Jun 19 -> x=1010. 85 px/day held throughout; Jun 21 -> x=1180.
+       Jun 9 =160  Jun 11=330  Jun 12=415  Jun 15=670  Jun 16.5=797.5  Jun 18=925  Jun 19=1010  Jun 21=1180 -->
+  <line x1="120" y1="290" x2="1250" y2="290" stroke="#a5b4fc" stroke-width="3"/>
+
+  <!-- ===== Event dots + leader lines + label blocks ===== -->
+
+  <!-- Jun 9 GA (x=160) -> Tier A, label x=40 -->
+  <line x1="160" y1="290" x2="150" y2="332" stroke="#818cf8" stroke-width="1.5"/>
+  <circle cx="160" cy="290" r="7" fill="#4f46e5" stroke="#fff" stroke-width="2"/>
+  <text x="40" y="350" font-size="19" font-weight="700" fill="#1e1b4b">Jun 9, 2026</text>
+  <text x="40" y="373" font-size="18" fill="#1f2937">Fable 5 and Mythos 5</text>
+  <text x="40" y="396" font-size="18" fill="#1f2937">reach general availability</text>
+
+  <!-- Jun 11 Amazon escalation (x=330) -> Tier B, label x=235 (ends before Jun 12 dot) -->
+  <line x1="330" y1="290" x2="320" y2="412" stroke="#818cf8" stroke-width="1.5"/>
+  <circle cx="330" cy="290" r="7" fill="#4f46e5" stroke="#fff" stroke-width="2"/>
+  <text x="235" y="430" font-size="19" font-weight="700" fill="#1e1b4b">Jun 11, 2026</text>
+  <text x="235" y="453" font-size="18" fill="#1f2937">Amazon escalates a</text>
+  <text x="235" y="476" font-size="18" fill="#1f2937">security finding to the</text>
+  <text x="235" y="499" font-size="18" fill="#1f2937">Treasury Secretary</text>
+
+  <!-- Jun 12 Commerce order (x=415) -> Tier C, label x=432 (right of dot), RED pivot -->
+  <line x1="415" y1="290" x2="432" y2="482" stroke="#ef4444" stroke-width="2"/>
+  <circle cx="415" cy="290" r="10" fill="#ef4444" stroke="#fff" stroke-width="2"/>
+  <text x="432" y="500" font-size="19" font-weight="700" fill="#ef4444">Jun 12, 2026, 5:21pm ET</text>
+  <text x="432" y="523" font-size="18" fill="#1f2937">Commerce export order bars</text>
+  <text x="432" y="546" font-size="18" fill="#1f2937">foreign nationals; both</text>
+  <text x="432" y="569" font-size="18" fill="#1f2937">models go dark worldwide</text>
+
+  <!-- Jun 15 negotiations (x=670) -> Tier A, label x=560 -->
+  <line x1="670" y1="290" x2="640" y2="332" stroke="#818cf8" stroke-width="1.5"/>
+  <circle cx="670" cy="290" r="7" fill="#4f46e5" stroke="#fff" stroke-width="2"/>
+  <text x="560" y="350" font-size="19" font-weight="700" fill="#1e1b4b">Jun 15, 2026</text>
+  <text x="560" y="373" font-size="18" fill="#1f2937">Anthropic and the White</text>
+  <text x="560" y="396" font-size="18" fill="#1f2937">House open negotiations</text>
+
+  <!-- Jun 16-17 G7 (x=797.5) -> Tier B, label x=690 -->
+  <line x1="797.5" y1="290" x2="760" y2="412" stroke="#818cf8" stroke-width="1.5"/>
+  <circle cx="797.5" cy="290" r="7" fill="#4f46e5" stroke="#fff" stroke-width="2"/>
+  <text x="690" y="430" font-size="19" font-weight="700" fill="#1e1b4b">Jun 16 to 17, 2026</text>
+  <text x="690" y="453" font-size="18" fill="#1f2937">At the G7, the administration</text>
+  <text x="690" y="476" font-size="18" fill="#1f2937">refuses allied carve-outs</text>
+
+  <!-- Jun 18 talks shift (x=925) -> Tier A (3 lines, clears Tier B), label x=862, hollow dot (ongoing) -->
+  <line x1="925" y1="290" x2="900" y2="332" stroke="#818cf8" stroke-width="1.5"/>
+  <circle cx="925" cy="290" r="7" fill="#fff" stroke="#4f46e5" stroke-width="2.5"/>
+  <text x="862" y="350" font-size="19" font-weight="700" fill="#1e1b4b">Jun 18, 2026</text>
+  <text x="862" y="373" font-size="18" fill="#1f2937">Talks shift to a shared</text>
+  <text x="862" y="396" font-size="18" fill="#1f2937">jailbreak-severity framework</text>
+
+  <!-- Jun 19 Trump de-escalation (x=1010) -> Tier C, label x=760 (left of dot), GREEN favorable -->
+  <line x1="1010" y1="290" x2="985" y2="482" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="1010" cy="290" r="9" fill="#22c55e" stroke="#fff" stroke-width="2"/>
+  <text x="760" y="500" font-size="19" font-weight="700" fill="#16a34a">Jun 19, 2026</text>
+  <text x="760" y="523" font-size="18" fill="#1f2937">Trump: Anthropic is not a threat</text>
+  <text x="760" y="546" font-size="18" fill="#1f2937">now and behaved responsibly;</text>
+  <text x="760" y="569" font-size="18" fill="#1f2937">sides build a severity framework</text>
+
+  <!-- Jun 21 NSA red-team disclosure (x=1180) -> Tier A, label x=1118 (right of dot), NEUTRAL INDIGO (ambiguous/security-tinged) -->
+  <line x1="1180" y1="290" x2="1205" y2="332" stroke="#6366f1" stroke-width="2"/>
+  <circle cx="1180" cy="290" r="9" fill="#4f46e5" stroke="#fff" stroke-width="2"/>
+  <text x="1118" y="350" font-size="19" font-weight="700" fill="#1e1b4b">Jun 21, 2026</text>
+  <text x="1118" y="373" font-size="18" fill="#1f2937">NSA red-team disclosure</text>
+  <text x="1118" y="396" font-size="18" fill="#1f2937">surfaces; Mythos reportedly broke</text>
+  <text x="1118" y="419" font-size="18" fill="#1f2937">into classified test systems in</text>
+  <text x="1118" y="442" font-size="18" fill="#1f2937">hours. Models still down.</text>
+
+  <!-- Source -->
+  <text x="40" y="592" font-size="14" fill="#1f2937">Forecasts: FutureSearch · 2026-06-23</text>
+</svg>
